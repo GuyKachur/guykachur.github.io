@@ -12,6 +12,7 @@ TODO
 
 ## Author
 [Mark Guy Kachur](https://GuyKachur.github.io "Guy's Personal Website")
+for
 [Class Website](http://johnguerra.co/classes/webDevelopment_spring_2019/)
 
 ### Credits
