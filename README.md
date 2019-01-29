@@ -6,6 +6,8 @@ The objective of this project was to create a homepage for myself using bootstra
 
 ## Screenshot
 ![websiteImage][logo]
+[logo]: https://github.com/GuyKachur/guykachur.github.io/blob/master/img/website-static.PNG "Snapshot of webpage"
+
 
 ## Technical Requirements
 TODO
@@ -16,4 +18,3 @@ TODO
 
 ### Credits
 Based heavily on [this](https://github.com/BlackrockDigital/startbootstrap-freelancer#about), Go check them out, they make great themes that you can use for whatever.
-[logo]: https://github.com/GuyKachur/guykachur.github.io/blob/master/img/website-static.PNG "Snapshot of webpage"
