@@ -5,9 +5,7 @@ Check it out [live](https://GuyKachur.github.io "Guy's Personal Website")
 The objective of this project was to create a homepage for myself using bootstrap, jquery, html, css. All of which was new to me
 
 ## Screenshot
-![websiteImage][logo]
-[logo]: https://github.com/GuyKachur/guykachur.github.io/blob/master/img/website-static.PNG "Snapshot of webpage"
-
+![alt text](https://github.com/GuyKachur/guykachur.github.io/img/webste-static.PNG)
 
 ## Technical Requirements
 TODO
