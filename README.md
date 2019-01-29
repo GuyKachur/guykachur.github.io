@@ -7,4 +7,4 @@ The objective of this project was to create a homepage for myself using bootstra
 ## Image
 ![Coming Soon][logo]
 
-[logo]: https://github.com/GuyKachur/GuyKachur.github.io/blob/master/img/website-static.png "Snapshot of webpage"
+[logo]: https://github.com/GuyKachur/guykachur.github.io/blob/master/img/website-static.PNG "Snapshot of webpage"
