@@ -1,14 +1,20 @@
 
 var canvas = document.getElementById("my_canvas");
-var reset = document.getElementById("reset").onclick= clearArray;
+var header = document.getElementById("mainNav");
+var footer = document.getElementById("footer text-center");
+document.getElementById("reset").onclick = clearArray;
+// document.getElementById("resize").onclick = resizeCanvas;
+
 var c = canvas.getContext("2d");
-canvas.addEventListener('click', function() {
+canvas.addEventListener('click', function(e) {
+	e.preventDefault();
 newBall();
 }, true);
 
 
 
-function clearArray() {
+function clearArray(e) {
+	e.preventDefault();
 	circles = [{
   x: 50,
   y: 100,
@@ -18,6 +24,7 @@ function clearArray() {
   color: 125
 }];
 }
+
 
 //create te container that will hold the boincing balls.
 var container = {
@@ -78,5 +85,31 @@ function animate() {
 
   requestAnimationFrame(animate);
 }
+function initCanvas() {
+	canvas.height = screen.availHeight;
+	canvas.width = screen.availWidth;
+	container.height = screen.availHeight;
+	container.width = screen.availWidth;
+
+}
+// function resizeCanvas(e) {
+// 	e.preventDefault();
+// 	canvas.height = screen.availHeight;
+// 	canvas.width = screen.availWidth;
+// 	container.height = screen.availHeight;
+// 	container.width = screen.availWidth;
+// }
+initCanvas();
 
 requestAnimationFrame(animate);
+
+
+document.getElementById("spawnballs").onclick = spawnballs;
+function spawnballs(e) {
+	e.preventDefault();
+	newBall();
+	newBall();
+	newBall();
+	newBall();
+	newBall();
+}

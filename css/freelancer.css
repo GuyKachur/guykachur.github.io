@@ -339,9 +339,7 @@ a {
   color: #18BC9C;
 }
 
-a.school_link{
-  color:#128f76;
-}
+
 
 a:focus, a:hover, a:active {
   color: #128f76;
