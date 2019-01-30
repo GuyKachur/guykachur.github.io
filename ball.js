@@ -1,5 +1,6 @@
 
 var canvas = document.getElementById("my_canvas");
+var reset = document.getElementById("reset").onclick= clearArray;
 var c = canvas.getContext("2d");
 canvas.addEventListener('click', function() {
 newBall();
