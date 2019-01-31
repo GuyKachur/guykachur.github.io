@@ -3,10 +3,6 @@ var canvas = document.getElementById("my_canvas");
 document.getElementById("reset").onclick = clearArray;
 document.getElementById("counterbutton").onclick = countStationary;
 
-
-var ctx = canvas.getContext("2d");
-
-
 function countStationary(e) {
 	e.preventDefault();
 	var count = 0;
@@ -15,7 +11,6 @@ function countStationary(e) {
 				count++;
 			}
 		}
-		//window.alert(count);
 		document.getElementById("counter").innerHTML = count;
 }
 
