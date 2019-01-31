@@ -1,3 +1,4 @@
+/* Overall your balls are absolutely mesmerizing and I enjoyed handling them. This is a great way to showcase your Javascript skills */
 
 var canvas = document.getElementById("my_canvas");
 document.getElementById("reset").onclick = clearArray;
