@@ -8,10 +8,11 @@ The objective of this project was to create a homepage for myself using bootstra
 ![alt text](https://github.com/GuyKachur/guykachur.github.io/blob/master/img/website-static.PNG)
 
 ## Technical Requirements
-* Jquery
+* JQuery
 * Bootstrap
 * HTML5
 * CSS
+* Javascript
 
 ## Author
 [Mark Guy Kachur](https://GuyKachur.github.io "Guy's Personal Website")
