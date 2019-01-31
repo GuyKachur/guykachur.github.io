@@ -1,9 +1,23 @@
 
 var canvas = document.getElementById("my_canvas");
-var header = document.getElementById("mainNav");
-var footer = document.getElementById("footer text-center");
 document.getElementById("reset").onclick = clearArray;
-// document.getElementById("resize").onclick = resizeCanvas;
+document.getElementById("counterbutton").onclick = countStationary;
+
+
+var ctx = canvas.getContext("2d");
+
+
+function countStationary(e) {
+	e.preventDefault();
+	var count = 0;
+	  for (var i = 0; i < balls.length; i++) {
+			if(balls[i].vx == 0 && balls[i].vy == 0) {
+				count++;
+			}
+		}
+		//window.alert(count);
+		document.getElementById("counter").innerHTML = count;
+}
 
 var c = canvas.getContext("2d");
 canvas.addEventListener('click', function(e) {
@@ -15,7 +29,7 @@ newBall();
 
 function clearArray(e) {
 	e.preventDefault();
-	circles = [{
+	balls = [{
   x: 50,
   y: 100,
   r: 10,
@@ -33,8 +47,8 @@ var container = {
   width: canvas.width,
   height: canvas.height
 };
-//create the array of circles that will be animated
-var circles = [{
+//create the array of balls that will be animated
+var balls = [{
   x: 50,
   y: 100,
   r: 10,
@@ -54,7 +68,7 @@ function newBall() {
     color: Math.floor(Math.random() * 255)
   }
 
-  circles.push(ball);
+  balls.push(ball);
 }
 
 function animate() {
@@ -62,25 +76,27 @@ function animate() {
   c.fillStyle = "#18BC9C";
   c.fillRect(container.x, container.y, container.width, container.height);
 
-  //loop throughj the circles array
-  for (var i = 0; i < circles.length; i++) {
-    //draw the circles
-    c.fillStyle = 'hsl(' + circles[i].color++ + ', 100%, 50%)';
+  //loop through the balls
+  for (var i = 0; i < balls.length; i++) {
+    //draw the balls
+    c.fillStyle = 'hsl(' + balls[i].color++ + ', 100%, 50%)';
     c.beginPath();
-    c.arc(circles[i].x, circles[i].y, circles[i].r, 0, Math.PI * 2, true);
+    c.arc(balls[i].x, balls[i].y, balls[i].r, 0, Math.PI * 2, true);
     c.fill()
 
-    //time to animate our circles ladies and gentlemen.
-    if (circles[i].x - circles[i].r + circles[i].vx < container.x || circles[i].x + circles[i].r + circles[i].vx > container.x + container.width) {
-      circles[i].vx = -circles[i].vx;
+    //Ball logic
+    if (balls[i].x - balls[i].r + balls[i].vx < container.x ||
+			 balls[i].x + balls[i].r + balls[i].vx > container.x + container.width) {
+      balls[i].vx = -balls[i].vx;
     }
 
-    if (circles[i].y + circles[i].r + circles[i].vy > container.y + container.height || circles[i].y - circles[i].r + circles[i].vy < container.y) {
-      circles[i].vy = -circles[i].vy;
+    if (balls[i].y + balls[i].r + balls[i].vy > container.y + container.height ||
+			 balls[i].y - balls[i].r + balls[i].vy < container.y) {
+      balls[i].vy = -balls[i].vy;
     }
 
-    circles[i].x += circles[i].vx
-    circles[i].y += circles[i].vy
+    balls[i].x += balls[i].vx
+    balls[i].y += balls[i].vy
   }
 
   requestAnimationFrame(animate);
@@ -92,13 +108,7 @@ function initCanvas() {
 	container.width = screen.availWidth;
 
 }
-// function resizeCanvas(e) {
-// 	e.preventDefault();
-// 	canvas.height = screen.availHeight;
-// 	canvas.width = screen.availWidth;
-// 	container.height = screen.availHeight;
-// 	container.width = screen.availWidth;
-// }
+
 initCanvas();
 
 requestAnimationFrame(animate);
